@@ -1,0 +1,60 @@
+{
+  "id": "38baf283-8782-4d8b-97b7-5e78a2a43720",
+  "version": "2.0",
+  "name": "download_pdf",
+  "url": "https://arxiv.org",
+  "tests": [{
+    "id": "102d2aac-a916-48a4-b9df-ce80850c5f74",
+    "name": "download_pdf",
+    "commands": [{
+      "id": "6f49dbe2-d124-4aa6-b37e-3dbca628e2e9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "369ad156-7c20-48d6-8d34-2791ecba347b",
+      "comment": "",
+      "command": "click",
+      "target": "id=recent-astro-ph",
+      "targets": [
+        ["id=recent-astro-ph", "id"],
+        ["linkText=recent", "linkText"],
+        ["css=#recent-astro-ph", "css:finder"],
+        ["xpath=//a[contains(text(),'recent')]", "xpath:link"],
+        ["xpath=//a[@id='recent-astro-ph']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/ul/li/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/list/astro-ph/recent')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'recent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1870cfb9-ea12-44af-86cd-2da5d25da664",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=pdf",
+      "targets": [
+        ["linkText=pdf", "linkText"],
+        ["css=dt:nth-child(1) a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'pdf')]", "xpath:link"],
+        ["xpath=//div[@id='dlpage']/dl/dt/span/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pdf/2402.19476')]", "xpath:href"],
+        ["xpath=//span/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c8cd81b2-fb01-42cd-86de-25740826d0b8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["102d2aac-a916-48a4-b9df-ce80850c5f74"]
+  }],
+  "urls": ["https://arxiv.org/"],
+  "plugins": []
+}
